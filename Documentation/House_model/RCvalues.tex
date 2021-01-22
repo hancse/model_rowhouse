@@ -1,14 +1,23 @@
-\section{House Model R and C Values}
+\section{White box lumped model: RC network}
+\subsection{White box lumped model}
 
-In heat transfer theory the basic thermal circuit contains thermal resistances. Heat transfer occurs via conduction, convection and radiation. In analogy with Ohm's Law for electricity, expressions can be derived for the heat transfer rate (analogous to electrical current) and the thermal resistances (analogous to ohmic resistances) in these three modes of heat transfer. The temperature difference plays a role analogous to the electrical voltage difference. These expressions are shown in Fig. \ref{fig:htr}.
+The objective of the house model for this project is to serve as test environment for a heat pump model, what means that the house model is intended as a tool to help taking building systems design decisions. The house heating needs calculation model implemented for this project is a white box lumped model. Specifically, it is a RC network model consisting of resistances (R) and capacities (C). The RC network model is based on electrical systems analogy. The simulation of thermodynamic systems characterizing building elements as resistances or capacities allows to simplify the model while maintaining a high simulation results accuracy (Bagheri et al., Bacher et al.).  
+There are several types of RC models, the most common being 3R4C models and 3R2C models which are applied on the outer and internal wall. For the simulation of simple house buildings 3R2C models perform as accurate as more complex 3R4C models (Fraisse et al. ). Considering that one of the objectives for this project is to obtain a fast but accurate simulation of a simple dwelling the 3R2C network model appeared as starting point. In the 3R2C model two indoor temperature nodes in the dwelling with capacities (usually an air and a wall temperature) and a well-known outdoor temperature are present. Between these 3 temperature nodes 3 heat transfer resistances are present. However, the direct heat transfer between the inner walls and the outdoor air is low. Moreover, uncertainties are present about heat transfer coefficients between walls and indoor air, different indoor temperatures in the house rooms and the ground temperature which deviates from the outdoor temperature. In addition, occupancy behaviour varies strongly. For that reason, we have made a further simplification to a 2R2C model. In section 4 it is shown that this dwelling model delivers a reliable annual energy consumption.
+
+
+\subsection{House Model R and C Values}
+
+This document presents the basic information for calculating a house model based on an RC network. This category of house models, analogous to electrical impedance networks, may have different numbers of R and C components, and may have various component topology. For the specific model properties, references will be given.
+
+In heat transfer theory the basic thermal circuit contains thermal resistances. Heat transfer occurs via conduction, convection and radiation. In analogy with Ohm's Law for electricity, expressions can be derived for the heat transfer rate (analogous to electrical current) and the thermal resistances (analogous to ohmic resistances) in these three modes of heat transfer. The temperature difference plays a role analogous to the electrical voltage difference. These expressions are shown in Fig.\ref{table_1}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\columnwidth]{Pictures/heat transfer mode.JPG}
-	\caption[Short title]{Heat transfer model \cite{GIGO}}.
-	\label{fig:htr}
+	\caption[Short title]{Heat transfer modes\cite{GIGO}}
+	\label{table_1}
 \end{figure}
-
-In \cite{HTTHERMO} and \cite{FUND} the expressions in Fig. \ref{fig:htr} are derived.
+\newpage
+In \cite{HTTHERMO} and \cite{FUND} the expressions in Fig.\ref{table_1} are derived.
 For conduction, the expression for $R_{th} = \frac{L}{k\dot A}$
 
 $L$ is the distance over which heat transfer takes place, or the thickness of the material
@@ -68,18 +77,18 @@ Some typical heat transfer thermal resistance values, also denoted as R\textsubs
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\columnwidth]{Pictures/Overview of heat resistances.JPG}
-	\caption[Short title]{An overview of heat transfer resistance \cite{SURFREST}.}
+	\caption[Short title]{An overview of heat transfer resistance\cite{SURFREST}}
 	\label{fig:overview}
 \end{figure}
 
 
-The standard R\textsubscript{c}-values that have been used for facades, roof and floor until 2020 are summarized in Fig. \ref{fig:Rc}:
+The standard R\textsubscript{c}-values that have been used for facades, roof and floor until 2020 are summarized in Fig.\ref{fig:Rcvalues}:
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\columnwidth]{Pictures/Rc_values_2020.JPG}
 	\caption[Short title]{Rc Values \cite{ISOL}}
-	\label{fig:Rc}
+	\label{fig:Rcvalues}
 \end{figure}
 
 New standard values will be used from 1-1-2021, since the building standard NEN 1068 will be replaced by the NTA 8800 standard. The old and new situation is described in "EnergieVademecum Energiebewust ontwerpen van nieuwbouwwoningen", chapter 5: Thermische isolatie, thermische bruggen en luchtdichtheid.
@@ -92,14 +101,15 @@ New standard values will be used from 1-1-2021, since the building standard NEN 
 	\label{fig:newRc}
 \end{figure}
 
-The values used for different types of houses such as: row houses, detached houses and apartments can be found in the document "Voorbeeldwoningen 2011" \cite{VOORBEELD}. An example with values for a common type of row house, built in the period from 1975 to 1991 is shown in Fig. \ref{fig:rowhouse}:
+The values used for different types of houses such as: row houses, detached houses and apartments can be found in the document "Voorbeeldwoningen 2011" \cite{VOORBEELD}. An example with values for a common type of row house, built in the period from 1975 to 1991 is shown in Fig.\ref{row_house}:
 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\columnwidth]{Pictures/row_house_1975-1991.JPG}
-	\caption[Short title]{R\textsubscript{c}-values for a row house type built between 1975-1991 \cite{VOORBEELD}}
-	\label{fig:rowhouse}
+	\caption[Short title]{R\textsubscript{c}-values for a row house type built between 1975-1991 \href{Voorbeeldwoningen 2011 bestaande bouw.pdf}{[7].}}
+	\label{row_house}
 \end{figure} 
 
-%\newpage
+
+\newpage
