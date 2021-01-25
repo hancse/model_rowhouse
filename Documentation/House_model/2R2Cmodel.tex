@@ -39,10 +39,10 @@ C_{wall}\frac{dT_{wall}}{dt}=\frac{T_{air}-T_{wall}}{R_{air_{\_}wall}} + (1-CF)\
       \item $T_{air}$: indoor air temperature $^o$C.
       \item $T_{outdoor}$: outdoor temperature $^o$C.
       \item $T_{wall}$: wall temperature $^o$C.
-      \item $R_{air_{\_}wall}$: walls surface resistance.
-      \item $R_{air_{\_}outdoor}$: outdoor surface resistance.
-      \item $C_{air}$: air capacity.
-      \item $C_{wall}$: wall capacity.
+      \item $R_{air_{\_}wall}$: walls surface resistance [$\frac{K}{W}$].
+      \item $R_{air_{\_}outdoor}$: outdoor surface resistance [$\frac{K}{W}$].
+      \item $C_{air}$: air capacity [$\frac{J}{K}$].
+      \item $C_{wall}$: wall capacity [$\frac{J}{K}$].
     \end{itemize}
     
 
@@ -52,8 +52,8 @@ Q_{solar}=g.\sum(A_{glass}.q_{solar})
 \end{equation}
 
 \begin{itemize}
-    \item $q_{solar}$: solar radiation on the outdoor walls [$W/m^2$]. 
-    \item g: g value of the glass (=ZTA in dutch) [0..1]\cite{zontoetreding}
+    \item $q_{solar}$: solar radiation on the outdoor walls [$\frac{W}{m^2}$]. 
+    \item g: g value of the glass (ZTA in dutch) [0..1]\cite{zontoetreding}
     \item A: glass surface [$m^2$].
 \end{itemize}
 
