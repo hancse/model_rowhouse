@@ -23,10 +23,10 @@ $A_{internal{\_}mass}$ & Floor and internal walls surface    & 170 & $m^2$\\
  $V_{dwelling}$ & Internal volume & 275.6 &$m^3$\\
   \hline
 
- $Rc_{facade}$ & Thermal resistance per unit area (thermal insulation), R-value & 1.3 &  $\frac{m^2}{kw}$\\
+ $Rc_{facade}$ & Thermal resistance per unit area (thermal insulation), R-value & 1.3 &  $\frac{m^2K}{w}$\\
   \hline
 
- $U_{glass}$& Window thermal transmittance, U-value & 2.9 &$\frac{W}{m^2k}$\\
+ $U_{glass}$& Window thermal transmittance, U-value & 2.9 &$\frac{W}{m^2K}$\\
  \hline
 
 n & Ventilation, air changes per hour  & 0.55 & $[number/h]$\\
@@ -105,6 +105,7 @@ Resistance indoor air-outdoor air: $R_{air{\_}outdoor} = \frac{1}{A_{facade} \cd
 
 \textbf{Calculation of the capacities.}
 \newline
+The heat capacity of interior walls can be determined using half of the actual wall thickness because both surfaces are considered as storing energy \cite{Architecture}.
 
 Capacity indoor air and walls: $C_{air} =\frac{rho_{internal{\_}mass} \cdot c_{internal{\_}mass} \cdot V_{internal{\_}mass}}{2} + \rho_{air} \cdot c_{air} \cdot V_{dwelling}  $ 
 

@@ -37,16 +37,16 @@ For convection, and radiation the thermal resistance: $R = \frac{1}{h \cdot A}$ 
     \item $h$  heat transfer coefficient  [$\frac{W}{m^2K}$]
 \end{itemize}
 
-R\textsubscript{c}-values or RSI-values (insulation) is the building industry term for thermal resistance per unit area \cite{Rvalues_insulation} [$\frac{m^2K}{W}/$].
+R\textsubscript{c}-values or RSI-values (insulation) is the building industry term for thermal resistance per unit area \cite{Rvalues_insulation} [$\frac{m^2K}{W}$].
 
 Some typical heat transfer thermal resistance values are: \cite{OVERALL}: 
 
 \begin{itemize}
-	\item Static layer of air, 40 mm thickness (1.57 in)  : R = 0.18 [$\frac{m^2K}{W}/$].
-	\item Inside heat transfer resistance, horizontal current : R = 0.13 [$\frac{m^2K}{W}/$]. 
-	\item Outside heat transfer resistance, horizontal current : R = 0.04 [$\frac{m^2K}{W}/$].
-	\item Inside heat transfer resistance, heat current from down upwards : R = 0.10 [$\frac{m^2K}{W}/$].
-	\item Outside heat transfer resistance, heat current from above downwards : R = 0.17 [$\frac{m^2K}{W}/$].
+	\item Static layer of air, 40 mm thickness (1.57 in)  : R = 0.18 [$\frac{m^2K}{W}$].
+	\item Inside heat transfer resistance, horizontal current : R = 0.13 [$\frac{m^2K}{W}$]. 
+	\item Outside heat transfer resistance, horizontal current : R = 0.04 [$\frac{m^2K}{W}$].
+	\item Inside heat transfer resistance, heat current from down upwards : R = 0.10 [$\frac{m^2K}{W}$].
+	\item Outside heat transfer resistance, heat current from above downwards : R = 0.17 [$\frac{m^2K}{W}$].
 	
 \end{itemize}
 
@@ -116,7 +116,7 @@ The 2R-2C house model structure is implemented as described below. The schematic
 	\label{fig:elec2R2C}
 	\end{figure}
 	
-The model consists of two capacitances C\textsubscript{air, indoor} and C\textsubscript{wall} and two resistances R\textsubscript{wall} and R\textsubscript{air, outdoor}. The incident solar energy is divided between C\textsubscript{wall} and C\textsubscript{air} through the convection factor CF. It is assumed that both internal heat (lighting, occupancy and electric devices) and supplied heat (installation) initially heat up the indoor air. In fig. \ref{fig:elec2R2C}, they are fully released at the T\textsubscript{air} node. 
+The model consists of two capacitances C\textsubscript{air, indoor} and C\textsubscript{wall} and two resistances R\textsubscript{wall} and R\textsubscript{air, outdoor}. The incident solar energy is divided between C\textsubscript{wall} and C\textsubscript{air} through the convection factor CF. It is assumed that both internal heat (lighting, occupancy and electric devices) and supplied heat (installation) initially heat up the indoor air. In fig. \ref{fig:envelope2R2C}, they are fully released at the T\textsubscript{air} node. 
 
  It is also assumed that furniture and the surface part of the walls have the same temperature as the air and the wall mass is divided between the air and wall mass. Thus, the capacity of the air node consists of the air capacity, furniture capacity and capacity of a part of the walls. \textbf{Appendix A} presents the coefficients in the dwelling model. In the resistance R\textsubscript{air, outdoor} the influence of heat transmission through the outdoor walls and natural ventilation is considered. 
  
@@ -131,7 +131,7 @@ C_{wall}\frac{dT_{wall}}{dt}=\frac{T_{air}-T_{wall}}{R_{air_{\_}wall}} + (1-CF)\
 \end{equation}
 
  \begin{itemize}
-      \item CF: convection factor (solar radiation): the convection factor is the part of the solar radiation that enters the room and is released directly convectively into the room
+      \item CF: convection factor (solar radiation): the convection factor is the part of the solar radiation that enters the room and is released directly convectively into the room.
       \item $\dot{Q}_{inst}$: delivered heat from heating system (radiator) [W].
       \item $\dot{Q}_{solar}$: heat from solar irradiation [W].
       \item $T_{air}$: indoor air temperature $^o$C.
@@ -147,11 +147,11 @@ C_{wall}\frac{dT_{wall}}{dt}=\frac{T_{air}-T_{wall}}{R_{air_{\_}wall}} + (1-CF)\
 
 Total heat transfer of solar irradiation through the glass windows. 
 \begin{equation}
-Q_{solar}=g.\sum(A_{glass}.q_{solar})
+\dot{Q}_{solar}=g.\sum(A_{glass}.\dot{q}_{solar})
 \end{equation}
 
 \begin{itemize}
-    \item $q_{solar}$: solar radiation on the outdoor walls [$\frac{W}{m^2}$]. 
+    \item $\dot{q}_{solar}$: solar radiation on the outdoor walls [$\frac{W}{m^2}$]. 
     \item g: g value of the glass (ZTA in dutch) [0..1]\cite{zontoetreding}
     \item A: glass surface [$m^2$].
 \end{itemize}
