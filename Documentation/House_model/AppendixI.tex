@@ -23,7 +23,7 @@ $A_{internal{\_}mass}$ & Floor and internal walls surface    & 170 & $m^2$\\
  $V_{dwelling}$ & Internal volume & 275.6 &$m^3$\\
   \hline
 
- $Rc_{facade}$ & Thermal resistance per unit area (thermal insulation), R-value & 1.3 &  $\frac{m^2K}{w}$\\
+ $R_{c, facade}$ & Thermal resistance for unit area (thermal insulation), R-value & 1.3 &  $\frac{m^2K}{w}$\\
   \hline
 
  $U_{glass}$& Window thermal transmittance, U-value & 2.9 &$\frac{W}{m^2K}$\\
@@ -36,57 +36,57 @@ n & Ventilation, air changes per hour  & 0.55 & $[number/h]$\\
  CF& Convection factor & 0.8 &\\
  \hline
  
- $N_{facade}$ &Facade construction & Light weight = 0/ Middle weight = 1/ Heavy weight = 2 &  \\
+ $N_{facade}$ &Facade construction index & Light weight = 0/ Middle weight = 1/ Heavy weight = 2 &  \\
  \hline
  
   $th_{facade}$& Construction thickness: Light weight / Middle weight / Heavy weight  & [ 0.1,  0.1, 0.2 ] & m \\
  \hline
   
- $c_{facade}$& Specific heat capacity construction [J/kgK] & [840, 840, 840] &$\frac{J}{KgK}$\\
+ $c_{facade}$& Specific heat capacity construction [J/kgK] & [840, 840, 840] &$\frac{J}{kg \cdot K}$\\
  \hline
  
- $\rho_{facade}$& Density construction: Light weight / Middle weight / Heavy weight  & [500, 1000, 2500] &$\frac{kg}{m3}$\\
+ $\rho_{facade}$& Density construction: Light weight / Middle weight / Heavy weight  & [500, 1000, 2500] &$\frac{kg}{m^3}$\\
  \hline
  
 
- $N_{internal{\_}mass}$& Floor and internal walls construction & Light weight = 0/ Middle weight = 1/ Heavy weight = 2 &\\
+ $N_{internal{\_}mass}$& Floor and internal walls construction index  & Light weight = 0/ Middle weight = 1/ Heavy weight = 2 &\\
  \hline
  
  $th_{internal{\_}mass}$& Construction thickness: Light weight / Middle weight / Heavy weight & [ 0.1,  0.1, 0.2 ] & m \\
  \hline
  
- $c_{internal{\_}mass}$& Specific heat capacity construction & [840, 840, 840] &$\frac{J}{KgK}$\\
+ $c_{internal{\_}mass}$& Specific heat capacity construction & [840, 840, 840] &$\frac{J}{kg \cdot K}$\\
  \hline
  
- $\rho_{internal{\_}mass}$& Density construction: Light weight / Middle weight / Heavy weight  & [500, 1000, 2500] &$\frac{kg}{m3}$\\
+ $\rho_{internal{\_}mass}$& Density construction: Light weight / Middle weight / Heavy weight  & [500, 1000, 2500] &$\frac{kg}{m^3}$\\
  \hline
  
- $\rho_{air}$& Density air & 1.20 &$\frac{kg}{m3}$\\
+ $\rho_{air}$& Density air & 1.20 &$\frac{kg}{m^3}$\\
  \hline
   
- $c_{air}$& specific heat capacity air  & 1005 &$\frac{J}{KgK}$\\
+ $c_{air}$& specific heat capacity air  & 1005 &$\frac{J}{kg \cdot K}$\\
  \hline
  
- $\alpha_{i{\_}facade}$ & Heat transfer coefficient. Interior surface thermal resistance $R_{i} =\frac{1}{\alpha_{i{\_}facade}}$  (Rc-Waarde=0.13,ISO 6946) & 8 & $\frac{W}{m^2k}$ \\
+ $\alpha_{i{\_}facade}$ & Heat transfer coefficient. Surface Interior thermal resistance $R_{si} =\frac{1}{\alpha_{i{\_}facade}}$  (R\textsubscript{c}-waarde = 0.13, ISO 6946) & 8 & $\frac{W}{m^2 \cdot K}$ \\
  \hline
  
- $\alpha_{e{\_}facade}$ & Heat transfer coefficient. Exterior surface thermal resistance $R_{se} =\frac{1}{\alpha_{e{\_}facade}}$ (0,04 $\frac{m^2k}{W}$ ,ISO 6946,external surfaces or external side of exterior wall) & 23 &$\frac{W}{m^2k}$\\
+ $\alpha_{e{\_}facade}$ & Heat transfer coefficient. Surface Exterior thermal resistance $R_{se} =\frac{1}{\alpha_{e{\_}facade}}$ (0,04 $\frac{m^2k}{W}$, ISO 6946, external surfaces or external side of exterior wall) & 23 &$\frac{W}{m^2 \cdot K}$\\
  \hline
  
- $\alpha_{internal{\_}mass}$& Heat transfer coefficient. Internal wall thermal resistance $ R_{air{\_}wall} = \frac{1}{A_{internal{\_}mass} \cdot \alpha_{internal{\_}mass}} $ Resistance indoor air-wall  & 8 &$\frac{W}{m^2k}$\\
+ $\alpha_{internal{\_}mass}$& Heat transfer coefficient. Internal wall thermal resistance $ R_{air{\_}wall} = \frac{1}{A_{internal{\_}mass} \cdot \alpha_{internal{\_}mass}} $ Resistance indoor air-wall  & 8 &$\frac{W}{m^2 \cdot K}$\\
  \hline
  
- $\rho_{internal{\_}masss}$& Density construction in [kg/m3] & 1 &$\frac{W}{m^2k}$\\
+ $\rho_{internal{\_}masss}$& Density construction in [$kg/m^3$] & 1 & $\frac{W}{m^2 \cdot K}$\\
  \hline
 
 \end{tabular}
 
-\caption{Values constants and parameters.}
+\caption{Values of constants and parameters in house model.}
 \label{tab:Paramteres}
 \end{table}
 
 \newpage
-Volume floor and internal walls construction [m3]: $V_{internal,mass} = A_{internal,mass} \cdot th_{internal,mass}$
+Volume floor and internal walls construction [$m^3$]: $V_{internal,mass} = A_{internal,mass} \cdot th_{internal,mass}$
 
 Ventilation, volume air flow $[\frac{m^3}{s}]$: $qV = \frac{n \cdot V_{dwelling}}{3600} $  
 
