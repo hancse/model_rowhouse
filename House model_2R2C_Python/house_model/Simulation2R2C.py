@@ -14,6 +14,8 @@ from internal_heat_gain import internal_heat_gain
 #from Temperature_SP     import temp_sp
 from Temperature_SP     import thermostat_sp, SP_profile
 
+import matplotlib
+matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 
 
@@ -97,6 +99,8 @@ def main():
     plt.plot(data[1], label='Twall')
     plt.plot(SP_sim, label='SP_Temperature')
     # plt.plot(T_outdoor_sim,label='Toutdoor')
+    plt.xlabel("time (hours)")
+    plt.ylabel("temperature ($\degree C$)")
     plt.legend(loc='best')
     plt.show()
     
